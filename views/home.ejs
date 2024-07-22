@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>home</title>
+</head>
+<body>
+  
+  
+    <div class="background">
+       
+      
+    <div class="loginbox">
+        <% if(info && info.length) {%>
+            <div class="infos">
+                <p class="pi">X</p> 
+                <%= info %>
+                   
+            </div>
+            <% } %>
+        
+        <h1 class="logo">Greensnout Cafe </h1>
+    <form action="/" method="POST" autocomplete="off">
+        
+            <label for="username"></label>
+            <input type="text" id="username" name="username" value="username">
+        
+       
+            <label for="password"></label>
+            <input type="password" id="password" name="password" value="password">
+        
+        <button class="buttonvalid">Login</button>
+        </form>
+        
+     
+        
+            <a class="homelink" href ="/register">New user? Register here</a>
+            <a class="homelink" href="/pictures">Browse pictures</a>
+     
+            </div>
+        </div>
+
+        <script src="/flashs.js"></script>
+</body>
+</html>

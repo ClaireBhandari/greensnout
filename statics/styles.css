@@ -1,0 +1,687 @@
+
+/*home page and register page*/
+.background {
+   
+    background-image: url("/greensnout3.jpg");
+ height:100vh;
+ width:100%;
+ /*viewport height*/
+background-repeat: no-repeat;
+background-size:cover;
+display:flex;
+align-items: center;
+/*vertical centering*/
+justify-content:center;
+/*horizontal centering left/rigth*/}
+
+.logo {
+    color:#74992e;
+    /*font-family: "Sevillana", cursive;*/
+    font: 1.4rem "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.sevillana-regular {
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.loginbox {
+    background-color:white;
+    height: 21em;
+    width:19em;
+    display: inline-block;
+    text-align: center;
+    border: 0.1em solid grey;
+   z-index:9;
+}
+/* ejs be like <%= 3 + 16 %>*/
+.buttonvalid {
+    background-color:#74992e;
+    font: 1.0rem "Fira Sans", sans-serif;
+    color:white;
+    border: none;
+    border-radius: 0.4em;
+    padding: 1vh 5vh;
+    margin: 3vh 0 0 0;
+}
+
+#password {
+    margin: 0.6em 0em 0em 0em;
+}
+
+#email {
+    margin: 0.6em 0em 0em 0em;
+}
+
+.homelink {
+    text-decoration: none;
+    display:grid;
+     text-align: center;
+     color:#74992e;
+     font: 1.0rem "Fira Sans", sans-serif;
+     margin: 1.5vh 0 0 0;
+}
+/*list pictures page*/
+
+.container {
+    text-align: center;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    z-index:-1;
+/*background-color:blueviolet;*/
+}
+/* top right bottom left */
+.inner{
+    margin: 5vh 0.1vh 0.5vh 0;
+    width:100vh;
+}
+
+.inner img {
+    width:24vh;
+    margin-bottom:0.5vh;
+    z-index:9;
+}
+
+.linky  {
+    font: 1.0rem "Fira Sans", sans-serif;
+    height:24vh;
+    text-decoration: none;
+    z-index:7; 
+}
+
+.img {
+    width:24.5vh;
+    height:18vh;
+    z-index:6;
+    display:inline-block;
+    position:relative;
+}
+/*title & creator on photos */
+.info  {
+   color:#dde1d6;
+    position:absolute;
+    top:0%;
+    left:50%;
+     z-index:7;
+  }
+
+  .container1 {
+    /*navbar top*/
+  background-color:#dde1d6;
+   text-align: center;
+   justify-content:center;
+   align-items:center;
+   display:flex;
+   z-index:-1;
+   width:100%;
+   
+}
+
+.container2 {
+ background-color:#dde1d6;
+  text-align: center;
+  justify-content:center;
+  align-items:center;
+ position:absolute;
+ width:100%;
+left: 0;
+bottom:-23vh;
+  z-index:10;
+  
+}
+/*small screen size*/
+@media (max-width: 500px) {
+    .container {
+     display:grid;
+   
+    } 
+
+    .inner{
+        
+       /* margin: 10px;
+        width:250px;*/
+        margin:2vh 0 0 1vh;
+        width:23vh;
+    }
+    .inner img {
+        width:23vh;
+        display:grid;
+    }
+    .info  {
+        position:absolute;
+        top:0%;
+        left:10%;
+         z-index:10;
+      }
+.twocol {
+   
+    align-items: left;
+   float:left;
+  position:relative;
+    width:23vh;
+}
+
+.right3 {
+ 
+    position:absolute; 
+    /*left: 28px;
+    top:20px;
+     left: 2vh;*/
+     left: 2vh;
+    top:2vh;
+}
+
+.right4{
+    
+    position:absolute; 
+ /* top: 250px;
+left: 28px;*/
+top:22vh;
+left:1.7vh;}
+
+.loginbox2 {
+    display:grid;
+ 
+}
+    
+}
+
+a {
+    text-decoration: none;  
+}
+
+/*show page*/
+
+.background2 {
+    height:100vh;
+    width:100%;
+display:inline-flex;
+
+/*vertical centering*/
+justify-content:center;}
+
+
+h1 {
+    color:teal;
+    font: 1.5rem "Fira Sans", sans-serif;
+}
+
+.loginbox2 {
+    
+   /* height: 60em;
+    width:60em;*/
+    height: 100vh;
+    width:90vh;
+    display: inline;
+    justify-content:center;
+    position:relative;
+
+    text-align: center;
+    
+    border: 0.1vh solid grey;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    padding-top:3vh;
+}
+
+.box{
+   
+   
+    width:100%;
+    height:20%;
+    border: 0.1vh solid grey; 
+    overflow:hidden;
+   
+}
+
+/*navbar*/
+.home  {
+    background-color:#dde1d6;
+    top:0;
+    height:9vh;
+   width:40vh;
+    align-items: center;
+   
+    display:block;
+    
+}
+
+.navlink {
+    color:teal;
+     text-decoration: none; 
+    font: 1.0rem "Fira Sans", sans-serif;
+    border: none;
+    position:relative;
+    float:left;
+    display:grid;
+   /* font: inherit;*/
+    /*padding: 10px 50px;*/
+    padding: 1vh 3.8vh;
+    margin: 3vh 0 0 0;
+    top:0.6vh;
+   
+  
+}
+
+.glogo {
+    width:7vh;
+    position:absolute;
+    top:-3vh;
+    left:-3vh;
+
+}
+
+.newicon {
+    width:3.8vh;
+    position:absolute;
+    top:-0.8vh;
+}
+
+
+.navlink2 {
+    color:teal;
+    text-decoration: none; 
+    border: none;
+    text-align:left;
+    font: 1.2rem "Fira Sans", sans-serif;
+     /*display:grid;*/
+    padding: 0.8vh 0;
+    margin: 4vh 0 0 0;
+   background-color: inherit;
+  
+}
+
+.buttonvalid2 {
+    background-color:#74992e;
+    color:white;
+    border: none;
+    font: 1.2rem "Fira Sans", sans-serif;
+    float:right;
+    border-radius: 0.4vh;
+    padding: 0.8vh 4vh;
+    margin: 3.2vh 0 0 0;
+   
+}
+
+.toggle{
+    /*position:fixed;*/
+    position:absolute;
+    top:0;
+    left:1.4vh;
+    background-color:#dde1d6;
+    width:4vh;
+    height:4vh;
+    z-index:10;
+   
+
+}
+
+.toggle img{
+    width:1.6vh;
+    height:1.6vh;
+    position:fixed;
+    background-color:orange;
+    top:2.4vh;
+    left:4.9vh;
+  
+}
+.dropdown {
+    display:grid;
+    visibility:hidden;
+}
+.hamburger{
+    width:1.6vh;
+    height:1.6vh;
+    position:fixed;
+    top:2.4vh;
+    left:2.4vh;
+    visibility:visible;
+
+   
+}
+
+.hamburger2{
+    width:1.6vh;
+    height:1.6vh;
+    position:fixed;
+    top:2.4vh;
+    left:2.4vh;
+     /*left:30px;*/
+    visibility:visible;
+
+   
+}
+
+.hamburgx{
+    width:1.6vh;
+    height:1.6vh;
+    position:fixed;
+    top:2.4vh;
+    left:2.4vh;
+    visibility:hidden;
+  
+
+}
+
+
+.hamburgx2{
+    width:1.6vh;
+    height:1.6vh;
+    position:fixed;
+    top:2.4vh;
+    left:2.4vh;
+    visibility:hidden;
+  
+
+}
+
+.dropcont{
+/*box for dropdown menu*/
+    position:fixed;
+    top:0.8vh;
+    background-color:#dde1d6;
+    width:20vh;
+    height:0;
+    z-index:9;
+}
+
+.dropcont2{
+
+    position:fixed;
+    top:0.8vh;
+    background-color:#dde1d6;
+    width:20vh;
+    height:0;
+    z-index:9;
+}
+
+.showpic  {
+    /*width:650px;*/
+    width:70vh;
+    height:auto;
+}
+
+.details {
+    font: 1.0rem "Fira Sans", sans-serif;
+}
+
+.navlink3 {
+    color:teal;
+    text-decoration: none; 
+    font: 1.0rem "Fira Sans", sans-serif;
+    position:relative;
+    display:grid;
+   /* font: inherit;*/
+    padding: 1vh 1vh;
+    margin: 1vh 0 0 0;
+    top:1vh; 
+}
+.head2{
+    color:teal;
+    font: 1.2rem "Fira Sans", sans-serif;
+}
+/*upload imgs new page*/
+.navlink4 {
+    color:teal;
+    text-decoration: none; 
+    font: 1.0rem "Fira Sans", sans-serif;
+    position:relative;
+    display:grid;
+   /* font: inherit;
+   edit page,*/
+    top:3vh;
+}
+
+/* file picker for new2.ejs 
+is a pseudo class */
+input::file-selector-button{
+    font-weight: bold;
+    margin-top:1vh;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    background-color:#74992e;
+    color:white;
+    border: none;
+    font: 1.0rem "Fira Sans", sans-serif;
+}
+
+#preview {
+    width:auto;
+    margin-left:0vh;
+    margin-top:1vh;
+}
+
+/*edit page*/
+
+
+.head3{
+    color:teal;
+    font: 1.2rem "Fira Sans", sans-serif;
+}
+
+
+.navlink5 {
+    color:teal;
+    text-decoration: none; 
+    font: 1.1rem "Fira Sans", sans-serif;
+    position:relative;
+    display:grid;
+    top:1vh;
+}
+
+.showpic2 {
+    width:auto;
+    height:40vh;
+    margin-left:1vh;
+    margin-top:1vh;
+}
+.two {
+    display:flex;
+    /*background-color:pink;*/
+}
+.right{
+   
+    width:auto;
+    height:40vh;
+  display:grid;
+}
+
+.right2{
+    width:auto;
+    /*height:500px;*/
+    height:40vh;
+}
+
+label {
+    color:teal;
+    font: 1.0rem "Fira Sans", sans-serif;
+}
+
+/*for flash messages*/
+.infos {
+
+    background-color:white;
+    height: 2em;
+    width:21em;
+    font: 1.2rem "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+border: 0.2vh solid grey;
+ padding-top:1vh;
+ padding-bottom:1vh;
+text-align: center;
+position:absolute;
+left:0;
+right:0;
+top:1vh;
+margin-left:auto;
+margin-right:auto;
+z-index:12;
+
+}
+
+.pi {
+    position:absolute;
+    top:-1vh;
+    right:0;
+}
+
+.comments {
+    resize: none;
+}
+
+.twocol {
+    display:flex;
+    align-items: center;
+    justify-content:center ;
+    /*background-color:pink;*/
+}
+
+.right3{
+    display:inline;
+    width: 33vh;
+    height:40vh;
+    margin-right:4vh;
+}
+/*for comments*/
+.right4{
+    display:inline;
+    /*width:410px;
+    height:500px;*/
+    width: 33vh;
+    height:40vh;
+    border: 0.1vh solid grey;
+    font: 1.0rem "Fira Sans", sans-serif;
+    overflow:scroll;
+}
+
+.deletebutton {
+    width:1vh;
+    height:auto;
+    float:right;
+    margin:1vh;
+}
+
+#title {
+    display:grid;
+
+}
+
+#species { 
+    display:grid;
+}
+/*small screen size*/
+@media (max-width: 500px) {
+    .navlink{
+        visibility:hidden;
+    }
+
+    .toggle{
+        visibility:visible;
+        z-index:1;
+        position:fixed;
+     }
+
+     .home{
+        visibility:hidden;
+    }
+
+    .hamburger{
+        z-index:10;
+        position:fixed;
+      
+    }
+    .hamburgx{
+        z-index:10;
+        position:fixed;
+    }
+.container2{
+ position:fixed;
+ bottom:0;
+
+}
+    .hamburger2{
+        z-index:10;
+    }
+    .hamburgx2{
+        z-index:10;
+    }
+
+    .showpic{
+    /* width:400px;*/
+    width: 35vh;
+     height:auto;
+    }
+    .buttonvalid2{
+        visibility:hidden;
+    }
+
+    .navlink3 {
+        visibility:hidden;
+     }
+
+  
+.showpic2 {
+    position:absolute;
+    /*top:180px;*/
+    top:15vh;
+    left:0;
+    height:29vh;
+    width:auto;
+    display:grid;
+}
+
+.right {
+    position:absolute;
+   /* top:450px;*/
+    top:37vh;
+
+}
+.head3{
+visibility:hidden;
+}
+
+}
+
+@media (min-width: 510px) {
+    .navlink{
+        color:teal;
+      
+    }
+    .toggle{
+      
+        z-index:10;
+    }
+    .hamburger{
+        z-index:2;
+        position:absolute;
+    }
+    .hamburgx{
+       
+        position:absolute;
+    }
+    
+    .dropdown{
+        visibility:hidden; 
+    z-index:-1;   }
+
+    .dropcont{
+        visibility:hidden;
+        height:0;
+    }
+
+    .dropcont2{
+        visibility:hidden;
+        height:0;
+    }
+
+    .navlink2{
+        visibility:hidden;
+        color:magenta;
+
+    }  
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" >
+    <title>photo list</title>
+</head>
+
+<body>
+    
+    <div class="container1">
+        <p class="toggle"> </p>
+        <img class="hamburger" src="/hamburga.png">
+        <img class="hamburgx" src="/hamburgx.png">
+        <% if(locals.currentUser) {%>
+<div class="navlink"><h1>Welcome, <%= locals.currentUser.username %></h1></div>
+<% } %>
+        <div class="home"><a class="navlink"  href="/">Home<img class="glogo" src="greensnlogo.png"></a> 
+            <a class="navlink" href="/pictures/new2">Upload photo<img class="newicon" src="newicon.png"></a>
+            <form action="/logout" method="POST">
+                <button class="buttonvalid2">Logout</button>
+            </form>
+     
+            
+            
+        </div>
+        </div>
+        <div class="dropcont">
+        <ul class="dropdown">
+            <a class="navlink2"  href="/">Home</a> 
+            <a class="navlink2"  href="/pictures">Browse</a> 
+                <a class="navlink2" href="/pictures/new2">Upload new photo</a>
+                <form action="/logout" method="POST">
+                    <button class="navlink2" >Logout</button>
+                </form>
+           </ul>
+       </div>
+    <div class="container">
+        <% if(info && info.length) {%>
+            <div class="infos">
+                <p class="pi">X</p> 
+                <%= info %>
+            </div>
+            <% } %>
+    
+        <div class="inner">
+        <% for (let seapic of seapics) {%>
+         
+       <a class="linky" href= "/pictures/<%= seapic._id %>"> <span class="img"><img src= "<%= seapic.image.url %>">  <p class="info"><%= seapic.title %> by <%= seapic.creator.username %></p></span>  </a>
+    
+       <%  }%>  
+   
+    </div>
+    </div>
+
+    <div class="container2"><p class="navlink3">&copy Greensnout cafe<p></div>
+
+        <script src="/flashs.js"></script>
+    <script src="/hamburger.js"></script>
+</body>
+</html>

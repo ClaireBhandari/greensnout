@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css"  rel="stylesheet" type="text/css">
+    <title>large size photos</title>
+   
+</head>
+<body>
+
+    <div class="container1">
+        <p class="toggle"> </p>
+        <img class="hamburger" src="/hamburga.png">
+        <img class="hamburgx" src="/hamburgx.png">
+    
+
+        <div class="home"><a class="navlink"  href="/">Home<img class="glogo" src="/greensnlogo.png"></a> 
+            <a class="navlink"  href="/pictures">Browse</a>
+            <form action="/logout" method="POST">
+                <button class="buttonvalid2">Logout</button>
+            </form>
+     
+            
+            
+        </div>
+        </div>
+        <div class="dropcont">
+        <ul class="dropdown">
+            <a class="navlink2"  href="/">Home</a>
+            <a class="navlink2"  href="/pictures">Browse</a> 
+                <a class="navlink2" href="/pictures/new2">Upload new photo</a>
+                <a class="navlink2" href="/pictures/<%= seapics._id%>/edit">Edit photo</a>
+                <a class="navlink2" href="/pictures/<%= seapics._id%>/delete">Delete photo</a>
+                <form action="/logout" method="POST">
+                    <button class="navlink2" >Logout</button>
+                </form>
+           </ul>
+       </div>
+    <div class="background2">
+   
+ 
+   <div class="loginbox2">
+    <% if(info && info.length) {%>
+        <div class="infos">
+            <p class="pi">X</p> 
+            <%= info %>
+        </div>
+        <% } %>
+   
+   
+    <img class= "showpic" src= "<%= seapics.image.url %>" >
+
+    <h2 class="head2"><%= seapics.title %> by <%= seapics.creator.username %>  Species: <%= seapics.species %></h2>
+    <div class="twocol">
+        
+      
+        <span class="right3">
+        <form action="/pictures/<%= seapics._id%>/comments" method="POST">
+        <label for="comment"  class="navlink3"></label>
+ <textarea class="comments" id="comments" name="comments" rows="5" cols="33">Write your thoughts here!
+    </textarea>
+    <button class="buttonvalid" >Submit</button>
+    </form>
+   <% if(currentUser && seapics.creator.equals(currentUser._id)) {%>
+        <p class="navlink3" id="delet" href="/pictures/<%= seapics._id%>/edit">Delete photo</p>
+        <a class="navlink3" href="/pictures/<%= seapics._id%>/edit">Edit photo</a>
+        <a class="navlink3" href="/pictures/new2">Upload new photo</a>
+        <% } %>
+</span>
+<span class="right4">
+    <h3>Comments:</h3>
+    
+   
+    <% for (let i=0; i<seapics.comments.length; i++) {%>
+        <div class="box">
+          
+            <a href="/pictures/<%= seapics._id%>/comments/<%= seapics.comments[i]._id%>/remove">  <img class="deletebutton" src="/hamburgx.png"></a>
+          
+          
+            <p><%= seapics.comments[i].author %> : <%= seapics.comments[i].info %> </p>
+    </div>
+        <%  }%>  
+        
+        </span>
+  
+</div>
+
+</div>
+
+<div class="container2"><p class="navlink3">&copy Greensnout cafe<p></div>
+
+    <script src="/flashs.js"></script>   
+<script src="/hamburger.js"></script>
+
+<script src="/delet.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" >
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container1">
+        <p class="toggle"> </p>
+        <img class="hamburger" src="/hamburga.png">
+        <img class="hamburgx" src="/hamburgx.png">
+    
+
+        <div class="home"><a class="navlink"  href="/">Home<img class="glogo" src="/greensnlogo.png"></a> 
+            <form action="/logout" method="POST">
+                <button class="buttonvalid2">Logout</button>
+            </form>
+     
+            
+            
+        </div>
+        </div>
+        <div class="dropcont">
+            <ul class="dropdown">
+                <a class="navlink2"  href="/pictures">Browse</a> 
+                    <a class="navlink2" href="/pictures/<%= seapics._id%>/delete">Delete photo</a>
+                    <form action="/logout" method="POST">
+                        <button class="navlink2" >Logout</button>
+                    </form>
+               </ul>
+           </div>
+        <% if(info && info.length) {%>
+            <div class="infos">
+                <%= info %>
+            </div>
+            <% } %>
+            <h1>Edit photo</h1>
+        <div class="two">
+           
+        <div class="right">
+  
+    <h2 class="head3"><%= seapics.title %></h2>
+    <form action="/pictures/<%= seapics._id%>?_method=PUT" method="POST">
+    
+        <label for="title">Title</label>
+        <input type="text" id="title" name="seapics[title]" value= "<%= seapics.title%>">
+    
+        <label for="species">Species</label>
+        <input type="text" id="species" name="seapics[species]" value= "<%= seapics.species%>">
+    <div>
+    <button class="buttonvalid">Done</button>
+</div>
+    </form>
+<a class="navlink5" href="/pictures/<%= seapics._id%>">Cancel edit</a>
+        </div>
+
+        <div class="right2">
+            <img class= "showpic2" src= "<%= seapics.image.url %>">
+        </div>
+    </div>
+    
+    <div class="container2"><p class="navlink3">&copy Greensnout cafe<p></div>
+ 
+    <script src="/hamburger.js"></script>
+    <script src="/validation.js"></script>
+    <script src="/delet.js"></script>
+
+
+</body>
+</html>

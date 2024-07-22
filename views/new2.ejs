@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" >
+    <title>Document</title>
+ 
+</head>
+<body>
+    <div class="container1">
+        <p class="toggle"> </p>
+        <img class="hamburger" src="/hamburga.png">
+        <img class="hamburgx" src="/hamburgx.png">
+    
+
+        <div class="home"><a class="navlink"  href="/">Home<img class="glogo" src="/greensnlogo.png"></a> 
+            <form action="/logout" method="POST">
+                <button class="buttonvalid2">Logout</button>
+            </form>
+     
+            
+            
+        </div>
+        </div>
+
+        <div class="dropcont">
+            <ul class="dropdown">
+                <a class="navlink2"  href="/">Home</a> 
+                <a class="navlink2"  href="/pictures">Browse</a> 
+                    <form action="/logout" method="POST">
+                        <button class="navlink2" >Logout</button>
+                    </form>
+               </ul>
+           </div>
+
+           <% if(info && info.length) {%>
+            <div class="infos">
+                <p class="pi">X</p> 
+                <%= info %>
+            </div>
+            <% } %>
+       
+        
+    <h1>Upload photo</h1>
+    <form action="/pictures" enctype="multipart/form-data" method="POST">
+    <div>
+        <label for="title">title</label>
+        <input type="text" id="title" name="seapics[title]">
+    </div>
+    <div>
+        <label for="species">species</label>
+        <input type="text" id="species" name="seapics[species]">
+    </div>
+    <div>
+        <img id="preview" >
+    </div>
+   
+    <div>
+            
+        <label for="imgtest">image filename</label>
+        <input type="file" id="filename" name="seapics[image]" accept="image/*" >
+    </div>
+    <button class="buttonvalid">Add photo</button>
+    </form>
+ 
+        <a class="navlink4" href="/pictures">Cancel upload</a>
+    
+
+    <div class="container2"><p class="navlink3">&copy Greensnout cafe<p></div>
+
+    <script src="/flashs.js"></script>
+    <script src="/imgpreview.js"></script>
+    <script src="/hamburger.js"></script>
+    <script src="/validation.js"></script>
+  
+</body>
+</html> 
